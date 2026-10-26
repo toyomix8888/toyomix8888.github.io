@@ -1,11 +1,10 @@
 @charset "UTF-8";
+
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-
-
 
 :root {
   --particle-lightgreen: #31eb7f;
