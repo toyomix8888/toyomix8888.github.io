@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画をhtmlに埋め込む</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .video_wrapper {
+            width: 100%;
+            height: 100vh;
+            /* height: 50vh; */
+            /* 親要素の幅と高さを変えて、トリミングしたように見せる */
+            margin: 0 auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* ↑文字の下に動画を持っていく為 */
+        }
+
+        video {
+            object-fit: cover;
+            object-position: 50% 40%;
+            /* ↑ 前がX方向、後ろがy方向の指定 */
+            width: 100%;
+            height: 100%;
+            /* ↑親要素で決めたところが切れてるように見える。この３つはセット。いじらない 親要素の幅と高さ指定してトリミングしたように見える*/
+        }
+
+        .text_wrapper {
+            width: 50%;
+            padding: 200px 10px;
+            background-color: #ffffff44;
+            /* ７桁目と８桁めは透明度 */
+            backdrop-filter: blur(10px);
+            /* 後ろにある要素をぼかす */
+            font-family: "Audiowide", sans-serif;
+        }
+
+        h1 {
+            font-style: 48px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-style: 18px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video_wrapper">
+        <video src="img/main.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="text_wrapper">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptates?</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nemo rem debitis quidem sapiente, tenetur
+            iure magni nostrum ex sunt nihil inventore laborum placeat obcaecati non nulla vel, eligendi, odio natus.
+            Vel totam veritatis culpa autem nobis odit ratione illum maiores id aut rem neque accusamus similique atque,
+            in qui quam nesciunt! Nostrum nesciunt amet recusandae ipsum velit labore odio itaque hic consectetur
+            blanditiis? Temporibus velit incidunt deleniti ea vel provident. Quos dolorem harum porro, adipisci ex
+            excepturi nesciunt magnam molestias tempore deleniti sint modi reiciendis molestiae culpa odit repellat
+            dolore earum eaque exercitationem aut iste maxime possimus aspernatur suscipit. Autem beatae sed vel dolorum
+            libero, nisi officiis dignissimos fugit sequi obcaecati. Quis architecto odio laboriosam hic incidunt labore
+            unde. Tempore architecto eligendi eius reiciendis consequatur a dolor excepturi corporis, nemo cumque magni
+            asperiores odit neque quisquam harum reprehenderit mollitia maxime, accusantium aliquam repellat illum minus
+            suscipit! Dolorum, eaque animi facere modi in numquam libero optio sapiente, ab incidunt vel dicta iste
+            fugiat suscipit perspiciatis earum perferendis laborum. Aliquam nihil, quasi aperiam facilis nostrum impedit
+            tenetur, necessitatibus iste culpa libero harum voluptate minima vero veniam esse! Eum vel esse, tempora
+            itaque error commodi quo! Minus molestiae aliquid voluptate molestias optio!</p>
+
+    </div>
+</body>
+
+</html>
